@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instagram HDR Assembler — Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">Conversion report</p>
+    <h1>{{ heading }}</h1>
+
+    {% for item in items %}
+      <div class="card pair-card">
+        <span class="status {{ 'ok' if item.success else 'err' }}">
+          {{ "✓ success" if item.success else "✗ error" }}{% if total_count > 1 %} — {{ item.name }}{% endif %}
+        </span>
+
+        {% if item.warning %}
+          <div class="warning-banner">
+            ⚠ The report flags a <strong>negative GainMapMin</strong> — that's the same symptom as
+            the bug reported on Lightroom Mobile: Instagram may reject this file despite a
+            "successful" conversion. Worth tweaking the HDR export settings before
+            re-uploading if the upload fails.
+          </div>
+        {% endif %}
+
+        <pre class="log">{{ item.log }}</pre>
+      </div>
+    {% endfor %}
+
+    <div class="actions">
+      {% if ok_count > 0 %}
+        <a class="btn-download" href="{{ url_for('download', job_id=job_id) }}">
+          {{ "Download the JPEG" if ok_count == 1 else "Download .zip (" ~ ok_count ~ " files)" }}
+        </a>
+      {% endif %}
+      <a class="btn-secondary" href="{{ url_for('index') }}">← New conversion</a>
+    </div>
+
+    <p class="footnote">
+      Remember to upload from a desktop browser (up-to-date Chrome) afterwards, choosing
+      <code>Original</code> as the crop — not the default 1:1 crop.
+    </p>
+    <p class="version">Instagram HDR Assembler v{{ app_version }}</p>
+  </div>
+
+  <script>
+    (function () {
+      var jobId = {{ job_id | tojson }};
+      // Keeps the job's files alive while this page is open. If pings
+      // stop (tab closed, navigated away) the server purges the job a
+      // few seconds later. A refresh just resumes pinging, so it's safe.
+      function ping() {
+        if (document.visibilityState === 'visible') {
+          fetch('/heartbeat/' + jobId, { method: 'POST', keepalive: true }).catch(function () {});
+        }
+      }
+      ping();
+      setInterval(ping, 4000);
+    })();
+  </script>
+</body>
+</html>

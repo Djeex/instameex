@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instagram HDR Assembler</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">Instagram HDR Assembler</p>
+    <h1>Build your HDR JPEG for Instagram</h1>
+    <p class="subtitle">Drop your SDR export and your HDR export from Lightroom / Camera Raw. The script does the rest — gain map, 4:2:0 subsampling, Instagram metadata injection. Add more pairs to process several photos in one go.</p>
+
+    <div class="card">
+      {% if error %}
+        <div class="error-banner">{{ error }}</div>
+      {% endif %}
+
+      <form action="/convert" method="post" enctype="multipart/form-data">
+        <div id="duos">
+          <div class="duo">
+            <button type="button" class="remove-duo" title="Remove this pair" aria-label="Remove this pair">&times;</button>
+            <div class="dropzones">
+              <div class="dropzone" data-zone="sdr">
+                <span class="tag">SDR fallback</span>
+                <div class="hint">.jpg / .jpeg</div>
+                <div class="filename"></div>
+                <input type="file" name="sdr[]" accept=".jpg,.jpeg" required>
+              </div>
+              <div class="dropzone" data-zone="hdr">
+                <span class="tag">HDR export</span>
+                <div class="hint">.jpg (gain map), or 32-bit float .tif</div>
+                <div class="filename"></div>
+                <input type="file" name="hdr[]" accept=".jpg,.jpeg,.tif,.tiff" required>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="add-duo" id="add-duo">+ Add another pair</button>
+
+        <button class="run" type="submit">Assemble the HDR</button>
+      </form>
+    </div>
+
+    <p class="footnote">
+      Each pair's files must have identical dimensions, matching exactly one of Instagram's feed
+      resolutions: <strong>1080x1080</strong> (1:1), <strong>1080x1350</strong> (4:5), or
+      <strong>1080x566</strong> (1.91:1). Assembling more than one pair downloads as a <code>.zip</code>.
+      HDR can be a regular gain-map JPEG or Lightroom's 32-bit float linear HDR TIFF export; a
+      TIFF HDR file gives a more precise result than the JPEG gain-map route.
+    </p>
+    <p class="version">Instagram HDR Assembler v{{ app_version }}</p>
+  </div>
+
+  <script>
+    (function () {
+      var duosContainer = document.getElementById('duos');
+      var addBtn = document.getElementById('add-duo');
+
+      function updateFilename(zone) {
+        var input = zone.querySelector('input[type="file"]');
+        var filenameEl = zone.querySelector('.filename');
+        if (input.files && input.files.length > 0) {
+          zone.classList.add('has-file');
+          filenameEl.textContent = input.files[0].name;
+          filenameEl.style.display = 'block';
+        } else {
+          zone.classList.remove('has-file');
+          filenameEl.style.display = 'none';
+        }
+      }
+
+      duosContainer.addEventListener('change', function (e) {
+        var zone = e.target.closest('.dropzone');
+        if (zone) updateFilename(zone);
+      });
+
+      ['dragover', 'dragenter'].forEach(function (evt) {
+        duosContainer.addEventListener(evt, function (e) {
+          var zone = e.target.closest('.dropzone');
+          if (zone) { e.preventDefault(); zone.classList.add('has-file'); }
+        });
+      });
+
+      duosContainer.addEventListener('click', function (e) {
+        if (!e.target.classList.contains('remove-duo')) return;
+        var duos = duosContainer.querySelectorAll('.duo');
+        if (duos.length > 1) {
+          e.target.closest('.duo').remove();
+        }
+      });
+
+      addBtn.addEventListener('click', function () {
+        var clone = duosContainer.querySelector('.duo').cloneNode(true);
+        clone.querySelectorAll('input[type="file"]').forEach(function (input) { input.value = ''; });
+        clone.querySelectorAll('.filename').forEach(function (el) {
+          el.textContent = '';
+          el.style.display = 'none';
+        });
+        clone.querySelectorAll('.dropzone').forEach(function (zone) { zone.classList.remove('has-file'); });
+        duosContainer.appendChild(clone);
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+name: instagram-hdr
+
+services:
+  hdr-web:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: instagram-hdr-web
+    restart: unless-stopped
+    ports:
+      - "5050:5000"  # host:container — change 5050 if that's taken too
+    # Put a reverse proxy (Traefik/nginx/SWAG) in front of this if you
+    # want it reachable outside your LAN — the Flask app itself has no
+    # auth and no rate limiting, so keep it internal-only or add both
+    # before exposing it further than your own network.

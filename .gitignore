@@ -1,0 +1,19 @@
+# Runtime job files — uploaded/generated images, never committed
+jobs/*
+!jobs/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS clutter
+.DS_Store
+
+# Personal test images, never committed
+test/
+
+# Local editor/tool config
+.claude/
