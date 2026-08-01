@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img src="src/assets/img/logo.svg" alt="Instameex logo" width="400"/>
+  <img src="src/assets/img/logo-long.svg" alt="Instameex logo" width="400"/>
 </div>
 <p/>
 <div align="center">
@@ -8,7 +8,7 @@
 </div>
 </p>
 <div align="center">
-  <img src="illustration/insta-hdr-1.png" alt="Instameex screenshot" />
+  <img src="illustration/instameex.png" alt="Instameex screenshot" />
 </div>
 
 
