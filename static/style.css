@@ -118,6 +118,18 @@ form { display: block; }
 
 .add-duo:hover { color: var(--text); border-color: var(--accent-dim); }
 
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.checkbox-row input { cursor: pointer; }
+
 .dropzones {
   display: grid;
   grid-template-columns: 1fr 1fr;

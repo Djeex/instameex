@@ -40,16 +40,23 @@
 
         <button type="button" class="add-duo" id="add-duo">+ Add another pair</button>
 
+        <label class="checkbox-row">
+          <input type="checkbox" name="ignore_ig_resolution">
+          Process anyway if the resolution doesn't match Instagram's feed sizes
+        </label>
+
         <button class="run" type="submit">Assemble the HDR</button>
       </form>
     </div>
 
     <p class="footnote">
-      Each pair's files must have identical dimensions, matching exactly one of Instagram's feed
-      resolutions: <strong>1080x1080</strong> (1:1), <strong>1080x1350</strong> (4:5), or
-      <strong>1080x566</strong> (1.91:1). Assembling more than one pair downloads as a <code>.zip</code>.
-      HDR can be a regular gain-map JPEG or Lightroom's 32-bit float linear HDR TIFF export; a
-      TIFF HDR file gives a more precise result than the JPEG gain-map route.
+      Each pair's files must have identical dimensions. By default that must also match one of
+      Instagram's feed resolutions exactly: <strong>1080x1080</strong> (1:1),
+      <strong>1080x1350</strong> (4:5), or <strong>1080x566</strong> (1.91:1); check the box above
+      to skip that check for results meant for somewhere other than Instagram. Assembling more
+      than one pair downloads as a <code>.zip</code>. HDR can be a regular gain-map JPEG or
+      Lightroom's 32-bit float linear HDR TIFF export; a TIFF HDR file gives a more precise result
+      than the JPEG gain-map route.
     </p>
     <p class="version">Instagram HDR Assembler v{{ app_version }}</p>
   </div>

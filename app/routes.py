@@ -8,7 +8,7 @@ from flask import abort, redirect, render_template, request, send_file, url_for
 from . import assembler, jobs, validation
 
 
-def _process_pair(job_dir, index, sdr_file, hdr_file):
+def _process_pair(job_dir, index, sdr_file, hdr_file, ignore_ig_resolution=False):
     """Runs one SDR/HDR pair through validation + assembly. Returns an item
     dict for the job report; never raises — failures are recorded in it."""
     name = hdr_file.filename or sdr_file.filename or f"pair {index}"
@@ -28,7 +28,7 @@ def _process_pair(job_dir, index, sdr_file, hdr_file):
     sdr_file.save(sdr_path)
     hdr_file.save(hdr_path)
 
-    ig_error = validation.instagram_resolution_error(sdr_path, hdr_path)
+    ig_error = validation.instagram_resolution_error(sdr_path, hdr_path, ignore_ig_resolution)
     if ig_error:
         for p in (sdr_path, hdr_path):
             p.unlink(missing_ok=True)
@@ -62,11 +62,13 @@ def register_routes(app):
         if len(sdr_files) != len(hdr_files):
             return render_template("index.html", error="Each pair needs both an SDR and an HDR file."), 400
 
+        ignore_ig_resolution = request.form.get("ignore_ig_resolution") == "on"
+
         job_id = uuid.uuid4().hex[:12]
         job_dir = jobs.new_job_dir(job_id)
 
         items = [
-            _process_pair(job_dir, i, sdr_file, hdr_file)
+            _process_pair(job_dir, i, sdr_file, hdr_file, ignore_ig_resolution)
             for i, (sdr_file, hdr_file) in enumerate(zip(sdr_files, hdr_files), start=1)
         ]
 
