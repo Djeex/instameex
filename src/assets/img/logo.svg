@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1000 1000">
+  <!-- Generator: Adobe Illustrator 30.7.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 114)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#Dégradé_sans_nom_5);
+      }
+
+      .st1 {
+        fill: url(#Dégradé_sans_nom_264);
+        stroke: url(#Dégradé_sans_nom_334);
+      }
+
+      .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9, .st10, .st11, .st12 {
+        stroke-miterlimit: 10;
+      }
+
+      .st2 {
+        fill: url(#Dégradé_sans_nom_262);
+        stroke: url(#Dégradé_sans_nom_332);
+      }
+
+      .st3 {
+        fill: url(#Dégradé_sans_nom_269);
+        stroke: url(#Dégradé_sans_nom_339);
+      }
+
+      .st4 {
+        fill: url(#Dégradé_sans_nom_263);
+        stroke: url(#Dégradé_sans_nom_333);
+      }
+
+      .st5 {
+        fill: url(#Dégradé_sans_nom_265);
+        stroke: url(#Dégradé_sans_nom_335);
+      }
+
+      .st6 {
+        fill: url(#Dégradé_sans_nom_268);
+        stroke: url(#Dégradé_sans_nom_338);
+      }
+
+      .st7 {
+        fill: url(#Dégradé_sans_nom_261);
+        stroke: url(#Dégradé_sans_nom_331);
+      }
+
+      .st8 {
+        fill: url(#Dégradé_sans_nom_266);
+        stroke: url(#Dégradé_sans_nom_336);
+      }
+
+      .st9 {
+        fill: url(#Dégradé_sans_nom_267);
+        stroke: url(#Dégradé_sans_nom_337);
+      }
+
+      .st10 {
+        fill: url(#Dégradé_sans_nom_26);
+        stroke: url(#Dégradé_sans_nom_33);
+      }
+
+      .st11 {
+        fill: url(#Dégradé_sans_nom_2610);
+        stroke: url(#Dégradé_sans_nom_3310);
+      }
+
+      .st12 {
+        fill: url(#Dégradé_sans_nom_2611);
+        stroke: url(#Dégradé_sans_nom_3311);
+      }
+
+      .st13 {
+        fill: #fff;
+      }
+
+      .st14 {
+        fill: url(#Dégradé_sans_nom_51);
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_5" data-name="Dégradé sans nom 5" x1="245" y1="503" x2="747" y2="503" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#55c3ec"/>
+      <stop offset="1" stop-color="#1d71b8" stop-opacity=".8"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_51" data-name="Dégradé sans nom 5" x1="399.4" y1="504.3" x2="595.1" y2="504.3" xlink:href="#Dégradé_sans_nom_5"/>
+    <linearGradient id="Dégradé_sans_nom_26" data-name="Dégradé sans nom 26" x1="74.5" y1="560.2" x2="106.2" y2="591.8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#55c3ec"/>
+      <stop offset="1" stop-color="#1d71b8" stop-opacity=".8"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_33" data-name="Dégradé sans nom 33" x1="74.2" y1="559.9" x2="106.5" y2="592.2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#55c3ec"/>
+      <stop offset="1" stop-color="#1d71b8" stop-opacity=".5"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_261" data-name="Dégradé sans nom 26" x1="158.2" y1="648.8" x2="176.7" y2="667.3" gradientTransform="translate(661.8 133.9) rotate(60)" xlink:href="#Dégradé_sans_nom_26"/>
+    <linearGradient id="Dégradé_sans_nom_331" data-name="Dégradé sans nom 33" x1="157.8" y1="648.4" x2="177.1" y2="667.7" gradientTransform="translate(661.8 133.9) rotate(60)" xlink:href="#Dégradé_sans_nom_33"/>
+    <linearGradient id="Dégradé_sans_nom_262" data-name="Dégradé sans nom 26" x1="210.2" y1="714.7" x2="249.8" y2="754.3" gradientTransform="translate(909.8 659.5) rotate(105)" xlink:href="#Dégradé_sans_nom_26"/>
+    <linearGradient id="Dégradé_sans_nom_332" data-name="Dégradé sans nom 33" x1="209.9" y1="714.3" x2="250.2" y2="754.6" gradientTransform="translate(909.8 659.5) rotate(105)" xlink:href="#Dégradé_sans_nom_33"/>
+    <linearGradient id="Dégradé_sans_nom_263" data-name="Dégradé sans nom 26" x1="-54" y1="72.2" x2="-14.4" y2="111.8" gradientTransform="translate(909.8 659.5) rotate(105)" xlink:href="#Dégradé_sans_nom_26"/>
+    <linearGradient id="Dégradé_sans_nom_333" data-name="Dégradé sans nom 33" x1="-54.4" y1="71.9" x2="-14.1" y2="112.2" gradientTransform="translate(909.8 659.5) rotate(105)" xlink:href="#Dégradé_sans_nom_33"/>
+    <linearGradient id="Dégradé_sans_nom_264" data-name="Dégradé sans nom 26" x1="485.1" y1="-9.2" x2="503.7" y2="9.4" gradientTransform="translate(661.8 133.9) rotate(60)" xlink:href="#Dégradé_sans_nom_26"/>
+    <linearGradient id="Dégradé_sans_nom_334" data-name="Dégradé sans nom 33" x1="484.8" y1="-9.6" x2="504" y2="9.7" gradientTransform="translate(661.8 133.9) rotate(60)" xlink:href="#Dégradé_sans_nom_33"/>
+    <linearGradient id="Dégradé_sans_nom_265" data-name="Dégradé sans nom 26" x1="825.1" y1="682.3" x2="856.8" y2="713.9" xlink:href="#Dégradé_sans_nom_26"/>
+    <linearGradient id="Dégradé_sans_nom_335" data-name="Dégradé sans nom 33" x1="824.8" y1="681.9" x2="857.1" y2="714.3" xlink:href="#Dégradé_sans_nom_33"/>
+    <linearGradient id="Dégradé_sans_nom_266" data-name="Dégradé sans nom 26" x1="308.5" y1="356.5" x2="340.3" y2="388.3" gradientTransform="translate(909.8 659.5) rotate(105)" xlink:href="#Dégradé_sans_nom_26"/>
+    <linearGradient id="Dégradé_sans_nom_336" data-name="Dégradé sans nom 33" x1="308.1" y1="356.2" x2="340.7" y2="388.7" gradientTransform="translate(909.8 659.5) rotate(105)" xlink:href="#Dégradé_sans_nom_33"/>
+    <linearGradient id="Dégradé_sans_nom_267" data-name="Dégradé sans nom 26" x1="540.4" y1="450.4" x2="559" y2="469" gradientTransform="translate(661.8 133.9) rotate(60)" xlink:href="#Dégradé_sans_nom_26"/>
+    <linearGradient id="Dégradé_sans_nom_337" data-name="Dégradé sans nom 33" x1="540.1" y1="450" x2="559.4" y2="469.3" gradientTransform="translate(661.8 133.9) rotate(60)" xlink:href="#Dégradé_sans_nom_33"/>
+    <linearGradient id="Dégradé_sans_nom_268" data-name="Dégradé sans nom 26" x1="-336.4" y1="326.9" x2="-296.8" y2="366.5" gradientTransform="translate(342.9 490.5) rotate(-175.4)" xlink:href="#Dégradé_sans_nom_26"/>
+    <linearGradient id="Dégradé_sans_nom_338" data-name="Dégradé sans nom 33" x1="-336.7" y1="326.5" x2="-296.4" y2="366.8" gradientTransform="translate(342.9 490.5) rotate(-175.4)" xlink:href="#Dégradé_sans_nom_33"/>
+    <linearGradient id="Dégradé_sans_nom_269" data-name="Dégradé sans nom 26" x1="115" y1="-29.9" x2="133.6" y2="-11.3" gradientTransform="translate(814.9 151.4) rotate(139.6)" xlink:href="#Dégradé_sans_nom_26"/>
+    <linearGradient id="Dégradé_sans_nom_339" data-name="Dégradé sans nom 33" x1="114.7" y1="-30.2" x2="134" y2="-11" gradientTransform="translate(814.9 151.4) rotate(139.6)" xlink:href="#Dégradé_sans_nom_33"/>
+    <linearGradient id="Dégradé_sans_nom_2610" data-name="Dégradé sans nom 26" x1="94.5" y1="304.2" x2="124.4" y2="334" gradientTransform="translate(568 142) rotate(97.9)" xlink:href="#Dégradé_sans_nom_26"/>
+    <linearGradient id="Dégradé_sans_nom_3310" data-name="Dégradé sans nom 33" x1="94.2" y1="303.8" x2="124.7" y2="334.4" gradientTransform="translate(568 142) rotate(97.9)" xlink:href="#Dégradé_sans_nom_33"/>
+    <linearGradient id="Dégradé_sans_nom_2611" data-name="Dégradé sans nom 26" x1="435.8" y1="254.1" x2="454.4" y2="272.7" gradientTransform="translate(257.1 -349) rotate(52.9)" xlink:href="#Dégradé_sans_nom_26"/>
+    <linearGradient id="Dégradé_sans_nom_3311" data-name="Dégradé sans nom 33" x1="435.5" y1="253.8" x2="454.8" y2="273.1" gradientTransform="translate(257.1 -349) rotate(52.9)" xlink:href="#Dégradé_sans_nom_33"/>
+  </defs>
+  <g id="Calque_1">
+    <circle class="st13" cx="499.5" cy="499.5" r="499.5"/>
+    <g>
+      <path class="st0" d="M618.3,252h-244.6c-72.1,0-128.7,59.2-128.7,128.7v244.6c0,72.1,59.2,128.7,128.7,128.7h244.6c72.1,0,128.7-59.2,128.7-128.7v-244.6c0-72.1-59.2-128.7-128.7-128.7ZM497.3,656.2c-82.4,0-151.9-69.5-151.9-151.9s66.9-151.9,151.9-151.9,151.9,69.5,151.9,151.9-69.5,151.9-151.9,151.9ZM659.5,378.2c-20.6,0-36-15.4-36-36s15.4-36,36-36,36,15.4,36,36c0,20.6-15.4,36-36,36Z"/>
+      <path class="st14" d="M497.3,406.5c-54.1,0-97.8,43.8-97.8,97.8s43.8,97.8,97.8,97.8,97.8-43.8,97.8-97.8-43.8-97.8-97.8-97.8Z"/>
+    </g>
+  </g>
+  <g id="Calque_2">
+    <g id="Calque_3">
+      <circle class="st10" cx="90.4" cy="576" r="22.4"/>
+      <circle class="st7" cx="175.6" cy="607.9" r="13.1"/>
+      <circle class="st2" cx="140.8" cy="691.6" r="28"/>
+      <circle class="st4" cx="829.7" cy="602.6" r="28"/>
+      <circle class="st1" cx="908.9" cy="562.1" r="13.1"/>
+      <circle class="st5" cx="840.9" cy="698.1" r="22.4"/>
+      <circle class="st8" cx="466.1" cy="876.5" r="22.5"/>
+      <circle class="st9" cx="538.6" cy="839.8" r="13.1"/>
+      <circle class="st6" cx="686.1" cy="170.1" r="28"/>
+      <circle class="st3" cx="733.7" cy="247.7" r="13.1"/>
+      <circle class="st11" cx="236.9" cy="206.5" r="21.1"/>
+      <circle class="st12" cx="315.4" cy="164.9" r="13.1"/>
+    </g>
+  </g>
+</svg>

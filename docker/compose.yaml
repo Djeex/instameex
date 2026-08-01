@@ -1,11 +1,12 @@
-name: instagram-hdr
+name: instameex
 
 services:
   hdr-web:
     build:
       context: ..
       dockerfile: docker/Dockerfile
-    container_name: instagram-hdr-web
+    image: instameex
+    container_name: instameex
     restart: unless-stopped
     ports:
       - "5050:5000"  # host:container — change 5050 if that's taken too

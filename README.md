@@ -1,8 +1,22 @@
+
+<div align="center">
+  <img src="src/assets/img/logo.svg" alt="Instameex logo" width="400"/>
+</div>
+<p/>
+<div align="center">
+<p>Mix your SDR and HDR exports into an Instagram-ready HDR photo.</p>
+</div>
+</p>
+<div align="center">
+  <img src="illustration/insta-hdr-1.png" alt="Instameex screenshot" />
+</div>
+
+
 > [!NOTE]
 > ⚠️ _This is an heavily vibe-coded proof of concept — **do not expose it to the internet** — use it at your own risk._
->  _Github repo is a mirror of https://git.djeex.fr/Djeex/insta-hdr-converter. You'll find full package, history and release note there._
+>  _Github repo is a mirror of https://git.djeex.fr/Djeex/instameex. You'll find full package, history and release note there._
 
-# Instagram HDR Assembler
+# Instameex
 
 A small web front end for assembling Instagram-compatible HDR JPEGs (gain
 map) from an SDR export and an HDR export out of Lightroom or Camera Raw.
@@ -12,9 +26,6 @@ adapted from [kostis-kounadis/instagram-hdr-assembler](https://github.com/kostis
 itself based on the reverse-engineering work of
 [karachungen/instagram-hdr-converter](https://github.com/karachungen/instagram-hdr-converter).
 Original MIT license kept in [LICENSE](LICENSE). 
-
-
-![Instagram HDR Assembler screenshot](illustration/insta-hdr-1.png)
 
 ## How it works
 

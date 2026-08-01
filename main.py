@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Instagram HDR Assembler — Web Front
+Instameex - Web Front
 ------------------------------------
 Flask front end for assembling Instagram-compliant HDR JPEGs (gain map
 injection adapted from kostis-kounadis/instagram-hdr-assembler — see

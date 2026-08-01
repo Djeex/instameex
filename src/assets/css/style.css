@@ -49,10 +49,18 @@ body {
   margin: 0 0 0.6rem;
 }
 
+.logo {
+  display: block;
+  width: 290px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 1.5rem;
+}
+
 h1 {
   font-family: var(--sans);
-  font-weight: 700;
-  font-size: 2rem;
+  font-weight: 600;
+  font-size: 1.7rem;
   line-height: 1.2;
   margin: 0 0 0.5rem;
   color: var(--text);

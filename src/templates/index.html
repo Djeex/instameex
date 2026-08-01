@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Instagram HDR Assembler</title>
+  <title>Instameex</title>
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='img/logo.svg') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
   <div class="wrap">
-    <p class="eyebrow">Instagram HDR Assembler</p>
+    <img class="logo" src="{{ url_for('static', filename='img/logo-long.svg') }}" alt="Instameex">
     <h1>Build your HDR JPEG for Instagram</h1>
     <p class="subtitle">Drop your SDR export and your HDR export from Lightroom / Camera Raw. The script does the rest — gain map, 4:2:0 subsampling, Instagram metadata injection. Add more pairs to process several photos in one go.</p>
 
@@ -58,13 +59,13 @@
       Lightroom's 32-bit float linear HDR TIFF export; a TIFF HDR file gives a more precise result
       than the JPEG gain-map route.
     </p>
-    <p class="version">Instagram HDR Assembler v{{ app_version }}</p>
+    <p class="version">Instameex v{{ app_version }}</p>
     <div class="repo-links">
-      <a href="https://git.djeex.fr/Djeex/insta-hdr-converter" target="_blank" rel="noopener">
+      <a href="https://git.djeex.fr/Djeex/instameex" target="_blank" rel="noopener">
         <span class="icon"><img src="{{ url_for('static', filename='img/gitea.svg') }}" alt=""></span>
         Gitea
       </a>
-      <a href="https://github.com/Djeex/insta-hdr-converter" target="_blank" rel="noopener">
+      <a href="https://github.com/Djeex/instameex" target="_blank" rel="noopener">
         <span class="icon"><img src="{{ url_for('static', filename='img/github.svg') }}" alt=""></span>
         GitHub
       </a>

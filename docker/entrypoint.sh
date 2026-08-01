@@ -6,13 +6,12 @@ NC="\033[0m"
 
 VERSION=$(cat /app/VERSION)
 
-echo -e "${CYAN}╭──────────────────────────────────────────────────╮${NC}"
-echo -e "${CYAN}│${NC}   Instagram ${CYAN}HDR${NC} Assembler — version ${VERSION}        ${CYAN}│${NC}"
-echo -e "${CYAN}├──────────────────────────────────────────────────┤${NC}"
-echo -e "${CYAN}│${NC} License: MIT (see LICENSE)                       ${CYAN}│${NC}"
-echo -e "${CYAN}│${NC} Gain-map pipeline adapted from:                  ${CYAN}│${NC}"
-echo -e "${CYAN}│${NC} kostis-kounadis/instagram-hdr-assembler          ${CYAN}│${NC}"
-echo -e "${CYAN}╰──────────────────────────────────────────────────╯${NC}"
+echo -e "${CYAN}╭──────────────────────────────────────────────╮${NC}"
+echo -e "${CYAN}│${NC}          Instam${CYAN}eex${NC} - Version ${VERSION}           ${CYAN}│${NC}"
+echo -e "${CYAN}├──────────────────────────────────────────────┤${NC}"
+echo -e "${CYAN}│${NC} Source: https://git.djeex.fr/Djeex/instameex ${CYAN}│${NC}"
+echo -e "${CYAN}│${NC} Mirror: https://github.com/Djeex/instameex   ${CYAN}│${NC}"
+echo -e "${CYAN}╰──────────────────────────────────────────────╯${NC}"
 
 echo -e "[~] Checking required external tools..."
 missing=""
@@ -27,5 +26,5 @@ if [ -n "$missing" ]; then
 fi
 echo -e "[✓] Required tools found: ultrahdr_app, exiftool"
 
-echo -e "[~] Starting Instagram HDR Assembler web server..."
+echo -e "[~] Starting Instameex web server..."
 exec gunicorn --bind 0.0.0.0:5000 --workers 1 --threads 4 --timeout 120 main:app
