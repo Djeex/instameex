@@ -8,7 +8,7 @@
 </div>
 </p>
 <div align="center">
-  <img src="illustration/instameex.png" alt="Instameex screenshot" />
+  <img src="illustration/instameex-illustration.png" alt="Instameex screenshot" width="640"/>
 </div>
 
 
