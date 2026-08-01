@@ -42,9 +42,17 @@ def probe_dimensions(path: Path) -> tuple[int, int]:
         raise ValueError(f"could not read image dimensions ({e})") from e
 
 
-def instagram_resolution_error(sdr_path: Path, hdr_path: Path) -> str | None:
+def instagram_resolution_error(
+    sdr_path: Path, hdr_path: Path, ignore_ig_resolution: bool = False,
+) -> str | None:
     """Returns an error message if the pair doesn't meet Instagram's feed
-    requirements, otherwise None."""
+    requirements, otherwise None.
+
+    The dimension-match check always applies: mismatched SDR/HDR
+    dimensions misalign the gain map regardless of what platform the
+    result is for. ignore_ig_resolution skips only the exact-match check
+    against Instagram's own feed resolutions, for results meant for
+    somewhere other than Instagram."""
     try:
         sdr_w, sdr_h = probe_dimensions(sdr_path)
         hdr_w, hdr_h = probe_dimensions(hdr_path)
@@ -57,7 +65,7 @@ def instagram_resolution_error(sdr_path: Path, hdr_path: Path) -> str | None:
             "dimensions, otherwise the gain map will misalign."
         )
 
-    if (sdr_w, sdr_h) not in IG_RESOLUTIONS:
+    if not ignore_ig_resolution and (sdr_w, sdr_h) not in IG_RESOLUTIONS:
         allowed = ", ".join(f"{w}x{h} ({label})" for (w, h), label in IG_RESOLUTIONS.items())
         return f"Image is {sdr_w}x{sdr_h} — Instagram requires an exact match to one of: {allowed}."
 

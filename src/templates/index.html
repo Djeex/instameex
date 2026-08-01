@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Instagram HDR Assembler</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>Instameex</title>
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='img/logo.svg') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
   <div class="wrap">
-    <p class="eyebrow">Instagram HDR Assembler</p>
+    <img class="logo" src="{{ url_for('static', filename='img/logo-long.svg') }}" alt="Instameex">
     <h1>Build your HDR JPEG for Instagram</h1>
     <p class="subtitle">Drop your SDR export and your HDR export from Lightroom / Camera Raw. The script does the rest — gain map, 4:2:0 subsampling, Instagram metadata injection. Add more pairs to process several photos in one go.</p>
 
@@ -40,18 +41,35 @@
 
         <button type="button" class="add-duo" id="add-duo">+ Add another pair</button>
 
+        <label class="checkbox-row">
+          <input type="checkbox" name="ignore_ig_resolution">
+          Process anyway if the resolution doesn't match Instagram's feed sizes
+        </label>
+
         <button class="run" type="submit">Assemble the HDR</button>
       </form>
     </div>
 
     <p class="footnote">
-      Each pair's files must have identical dimensions, matching exactly one of Instagram's feed
-      resolutions: <strong>1080x1080</strong> (1:1), <strong>1080x1350</strong> (4:5), or
-      <strong>1080x566</strong> (1.91:1). Assembling more than one pair downloads as a <code>.zip</code>.
-      HDR can be a regular gain-map JPEG or Lightroom's 32-bit float linear HDR TIFF export; a
-      TIFF HDR file gives a more precise result than the JPEG gain-map route.
+      Each pair's files must have identical dimensions. By default that must also match one of
+      Instagram's feed resolutions exactly: <strong>1080x1080</strong> (1:1),
+      <strong>1080x1350</strong> (4:5), or <strong>1080x566</strong> (1.91:1); check the box above
+      to skip that check for results meant for somewhere other than Instagram. Assembling more
+      than one pair downloads as a <code>.zip</code>. HDR can be a regular gain-map JPEG or
+      Lightroom's 32-bit float linear HDR TIFF export; a TIFF HDR file gives a more precise result
+      than the JPEG gain-map route.
     </p>
-    <p class="version">Instagram HDR Assembler v{{ app_version }}</p>
+    <p class="version">Instameex v{{ app_version }}</p>
+    <div class="repo-links">
+      <a href="https://git.djeex.fr/Djeex/instameex" target="_blank" rel="noopener">
+        <span class="icon"><img src="{{ url_for('static', filename='img/gitea.svg') }}" alt=""></span>
+        Gitea
+      </a>
+      <a href="https://github.com/Djeex/instameex" target="_blank" rel="noopener">
+        <span class="icon"><img src="{{ url_for('static', filename='img/github.svg') }}" alt=""></span>
+        GitHub
+      </a>
+    </div>
   </div>
 
   <script>

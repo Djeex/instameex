@@ -2,15 +2,15 @@
 from flask import Flask
 
 from . import jobs
-from .config import BASE_DIR, MAX_CONTENT_LENGTH, VERSION
+from .config import ASSETS_DIR, MAX_CONTENT_LENGTH, TEMPLATES_DIR, VERSION
 from .routes import register_routes
 
 
 def create_app() -> Flask:
     app = Flask(
         __name__,
-        template_folder=str(BASE_DIR / "templates"),
-        static_folder=str(BASE_DIR / "static"),
+        template_folder=str(TEMPLATES_DIR),
+        static_folder=str(ASSETS_DIR),
     )
     app.config["MAX_CONTENT_LENGTH"] = MAX_CONTENT_LENGTH
 

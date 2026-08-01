@@ -1,27 +1,31 @@
+
+<div align="center">
+  <img src="src/assets/img/logo-long.svg" alt="Instameex logo" width="400"/>
+</div>
+<p/>
+<div align="center">
+<p>Mix your SDR and HDR exports into an Instagram-ready HDR photo.</p>
+</div>
+</p>
+<div align="center">
+  <img src="illustration/instameex-illustration.png" alt="Instameex screenshot" width="640"/>
+</div>
+
+
 > [!NOTE]
 > ⚠️ _This is an heavily vibe-coded proof of concept — **do not expose it to the internet** — use it at your own risk._
->  _Github repo is a mirror of https://git.djeex.fr/Djeex/insta-hdr-converter. You'll find full package, history and release note there._
+>  _Github repo is a mirror of https://git.djeex.fr/Djeex/instameex. You'll find full package, history and release note there._
 
-# Instagram HDR Assembler
+# Instameex
 
 A small web front end for assembling Instagram-compatible HDR JPEGs (gain
 map) from an SDR export and an HDR export out of Lightroom or Camera Raw.
 
-The gain-map assembly logic ([app/assembler.py](app/assembler.py)) is
+The gain-map assembly logic ([src/script/app/assembler.py](src/script/app/assembler.py)) is
 adapted from [kostis-kounadis/instagram-hdr-assembler](https://github.com/kostis-kounadis/instagram-hdr-assembler),
 itself based on the reverse-engineering work of
 [karachungen/instagram-hdr-converter](https://github.com/karachungen/instagram-hdr-converter).
 Original MIT license kept in [LICENSE](LICENSE). 
-
-Only the upstream's Method 2 (starting from an HDR JPEG that already
-carries a gain map) is implemented here. Method 1's AVIF decoding and
-its quality/transfer/gamut settings were dropped, but the HDR side can
-still be a 32-bit float linear TIFF (Lightroom's HDR TIFF export)
-instead of a gain-map JPEG for a more precise result. Either way the
-gain map is recomputed rather than reused as-is (see below), since it
-needs to be correct against the SDR file you actually provide.
-
-![Instagram HDR Assembler screenshot](screenshots/insta-hdr.png)
 
 ## How it works
 
