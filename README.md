@@ -7,14 +7,14 @@
 A small web front end for assembling Instagram-compatible HDR JPEGs (gain
 map) from an SDR export and an HDR export out of Lightroom or Camera Raw.
 
-The gain-map assembly logic ([app/assembler.py](app/assembler.py)) is
+The gain-map assembly logic ([src/script/app/assembler.py](src/script/app/assembler.py)) is
 adapted from [kostis-kounadis/instagram-hdr-assembler](https://github.com/kostis-kounadis/instagram-hdr-assembler),
 itself based on the reverse-engineering work of
 [karachungen/instagram-hdr-converter](https://github.com/karachungen/instagram-hdr-converter).
 Original MIT license kept in [LICENSE](LICENSE). 
 
 
-![Instagram HDR Assembler screenshot](screenshots/insta-hdr-1.png)
+![Instagram HDR Assembler screenshot](illustration/insta-hdr-1.png)
 
 ## How it works
 

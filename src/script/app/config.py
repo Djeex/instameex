@@ -1,9 +1,14 @@
 """Shared constants for the HDR-to-Instagram web front."""
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-JOBS_DIR = BASE_DIR / "jobs"
-VERSION = (BASE_DIR / "VERSION").read_text().strip()
+# This file lives at <repo root>/src/script/app/config.py.
+SRC_DIR = Path(__file__).resolve().parent.parent.parent
+REPO_ROOT = SRC_DIR.parent
+
+TEMPLATES_DIR = SRC_DIR / "templates"
+ASSETS_DIR = SRC_DIR / "assets"
+JOBS_DIR = REPO_ROOT / "jobs"
+VERSION = (REPO_ROOT / "VERSION").read_text().strip()
 
 ALLOWED_SDR_EXT = {".jpg", ".jpeg"}
 ALLOWED_HDR_EXT = {".jpg", ".jpeg", ".tif", ".tiff"}

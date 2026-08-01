@@ -8,18 +8,21 @@ LICENSE). Gives you a browser form instead of a terminal, and
 surfaces the assembly report (including the "GainMapMin is negative"
 warning) on a results page.
 
-This file is just the entry point — see app/ for the app itself:
-  app/config.py       constants
-  app/jobs.py         in-memory job registry + heartbeat/reaper
-  app/validation.py   upload + Instagram resolution checks
-  app/assembler.py    gain-map assembly pipeline
-  app/routes.py       Flask routes
+This file is just the entry point — see src/script/app/ for the app itself:
+  src/script/app/config.py       constants
+  src/script/app/jobs.py         in-memory job registry + heartbeat/reaper
+  src/script/app/validation.py   upload + Instagram resolution checks
+  src/script/app/assembler.py    gain-map assembly pipeline
+  src/script/app/routes.py       Flask routes
 
 Run directly:      python3 main.py
 Run in Docker:      see Dockerfile (gunicorn main:app)
 """
 import os
 import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent / "src" / "script"))
 
 from app import create_app
 from app.assembler import check_dependencies

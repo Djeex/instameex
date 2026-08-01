@@ -27,9 +27,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY main.py .
-COPY app/ app/
-COPY templates/ templates/
-COPY static/ static/
+COPY src/ src/
 COPY LICENSE VERSION ./
 COPY docker/entrypoint.sh /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh
