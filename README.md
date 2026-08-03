@@ -29,6 +29,27 @@ itself based on the reverse-engineering work of
 [karachungen/instagram-hdr-converter](https://github.com/karachungen/instagram-hdr-converter).
 Original MIT license kept in [LICENSE](LICENSE). 
 
+## Contents
+
+- [Why?](#why)
+- [How it works](#how-it-works)
+- [Running locally, without Docker](#running-locally-without-docker)
+- [Running with Docker](#running-with-docker)
+- [Running this on the open internet](#running-this-on-the-open-internet)
+
+## Why ?
+
+Nothing is more frustrating than Instagram's HDR handling. It compresses and destroys gain maps, and the slightest change in aspect ratio or size simply strips HDR out entirely. As for Lightroom, its "SDR preview" system is frankly unacceptable, it makes it impossible to get consistent results. Until now, posting on Instagram meant choosing between decent SDR with broken HDR, or the other way around.
+
+Why not simply edit your SDR file to perfection on one side, your HDR file on the other, and then recalculate a gain map from those two perfect files?
+A few pioneers have already gone down that road, notably with an [Adobe Lightroom Classic](https://github.com/karachungen/lightroom-plugin-export-hdr) plugin. Judge me if you want, but I only use Lightroom CC, which does not support plugins.
+
+I drew inspiration from a [fork of the original project](https://github.com/kostis-kounadis/instagram-hdr-assembler), the one that eventually became the LrC plugin, to build a frontend that can be easily deployed with Docker. Let's be honest: it was also a great excuse to put my Claude Code subscription to the test. And I have to say, watching it spin up its own environments, run end-to-end tests, self-correct its code, and write detailed summaries is genuinely impressive. I still reviewed everything myself, don't worry. I also learned a great deal about HDR fundamentals, gain maps, HLG/PQ tone curves, color spaces, and more.
+
+In short, here is what my workflow now looks like for posting on Instagram:
+
+![Instameex workflow](illustration/instameex-workflow.svg)
+
 ## How it works
 
 1. Upload an SDR file (`.jpg`/`.jpeg`) and an HDR file: either a gain-map
