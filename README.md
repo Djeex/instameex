@@ -21,6 +21,8 @@
 A small web front end for assembling Instagram-compatible HDR JPEGs (gain
 map) from an SDR export and an HDR export out of Lightroom or Camera Raw.
 
+Check the online version : [Instameex-web](https://instameex.djeex.fr/)
+
 The gain-map assembly logic ([src/script/app/assembler.py](src/script/app/assembler.py)) is
 adapted from [kostis-kounadis/instagram-hdr-assembler](https://github.com/kostis-kounadis/instagram-hdr-assembler),
 itself based on the reverse-engineering work of
