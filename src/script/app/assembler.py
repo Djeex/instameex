@@ -226,6 +226,8 @@ def _tiff_max_boost(hdr_linear: np.ndarray, sdr_420: Path) -> float:
     sdr_linear = _jpeg_to_linear(sdr_420)
     real_signal = sdr_linear > 0.005
     ratio = hdr_linear[real_signal] / sdr_linear[real_signal]
+    if ratio.size == 0:
+        return 1.0  # all-black SDR: nothing to boost
     n = min(32, ratio.size)
     return float(np.partition(ratio, -n)[-n])
 
