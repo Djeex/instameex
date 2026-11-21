@@ -27,4 +27,4 @@ fi
 echo -e "[✓] Required tools found: ultrahdr_app, exiftool"
 
 echo -e "[~] Starting Instameex web server..."
-exec gunicorn --bind 0.0.0.0:5000 --workers 1 --threads 4 --timeout 120 main:app
+exec gunicorn --no-control-socket --bind 0.0.0.0:5000 --workers 1 --threads 4 --timeout 120 main:app
