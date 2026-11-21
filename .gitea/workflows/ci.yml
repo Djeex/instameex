@@ -66,7 +66,7 @@ jobs:
           docker run --rm \
             -e DOCKER_HOST=tcp://dockerhost:2375 \
             --add-host=dockerhost:host-gateway \
-            aquasec/trivy:0.74.0 image --exit-code 1 --severity CRITICAL instameex:ci
+            aquasec/trivy:0.76.2 image --exit-code 1 --severity CRITICAL instameex:ci
 
       - name: Handle CRITICAL findings
         if: steps.trivy_critical.outcome == 'failure'
@@ -85,7 +85,7 @@ jobs:
           if docker run --rm \
             -e DOCKER_HOST=tcp://dockerhost:2375 \
             --add-host=dockerhost:host-gateway \
-            aquasec/trivy:0.74.0 image --exit-code 1 --severity CRITICAL instameex:remediated; then
+            aquasec/trivy:0.76.2 image --exit-code 1 --severity CRITICAL instameex:remediated; then
             echo "apk upgrade clears the CRITICAL finding(s) — opening a PR for review."
 
             BRANCH="auto/cve-fix-$(date +%Y%m%d)-$(echo "${{ github.sha }}" | cut -c1-7)"
@@ -113,7 +113,7 @@ jobs:
           docker run --rm \
             -e DOCKER_HOST=tcp://dockerhost:2375 \
             --add-host=dockerhost:host-gateway \
-            aquasec/trivy:0.74.0 image --exit-code 0 --severity HIGH instameex:ci
+            aquasec/trivy:0.76.2 image --exit-code 0 --severity HIGH instameex:ci
 
       - name: Publish tagged image
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
