@@ -1,0 +1,12 @@
+line-length = 100
+
+[lint]
+select = ["E", "F", "I", "UP", "B"]
+# E501: long lines are left alone. B905: zip() in routes.py is already
+# length-checked just before; not touching app logic here.
+ignore = ["E501", "B905"]
+
+[lint.isort]
+# Pinned explicitly: auto-detection of first-party modules differs between the
+# host and the Docker lint stage, which would silently diverge import sorting.
+known-first-party = ["app", "main"]
