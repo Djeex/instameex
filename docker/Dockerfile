@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # ---- Stage 1: compile libultrahdr (ultrahdr_app) --------------------------
-FROM alpine:3.21 AS uhdr-build
+FROM alpine:3.24 AS uhdr-build
 
 RUN apk add --no-cache \
         git cmake make g++ nasm pkgconf libjpeg-turbo-dev
