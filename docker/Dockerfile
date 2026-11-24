@@ -18,7 +18,7 @@ RUN cmake -G "Unix Makefiles" -DUHDR_WRITE_XMP=ON \
     && cmake --build libultrahdr/build -j"$(nproc)"
 
 # ---- Stage 2: runtime -------------------------------------------------------
-FROM python:3.14.10-alpine@sha256:5862d971d1f0ae26b258cefa4e893556b1d3aba81bd2ff30888704ad378bab67 AS base
+FROM python:3.15.2-alpine@sha256:0f9552bb28711333da16915ec146f5e6bb44a7fdac9ced15dc17c2e0206346dd AS base
 
 # apk upgrade pulls Alpine security fixes released after the base image was built.
 RUN apk upgrade --no-cache \
